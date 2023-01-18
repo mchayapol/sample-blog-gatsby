@@ -7,11 +7,11 @@ const NewBlogPage = () => {
   const formRef = React.useRef({});
   React.useEffect(() => {}, []);
 
-  const handleSubmit = (e) => {
+  const onClick = React.useCallback((e) => {
     e.preventDefault();
-    console.debug(formRef.current['formTopic'].value);
-    console.debug(formRef.current['formCategory'].value);
-  };
+    console.debug(formRef.current["formTopic"].value);
+    console.debug(formRef.current["formTopic"].value);
+  }, [formRef]);
 
   return (
     <Container>
@@ -37,7 +37,7 @@ const NewBlogPage = () => {
           <Form.Label>Author</Form.Label>
           <Form.Control type="text" placeholder="Author" />
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={handleSubmit}>
+        <Button variant="primary" type="submit" onClick={onClick}>
           Post
         </Button>
       </Form>
