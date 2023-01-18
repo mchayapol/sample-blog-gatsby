@@ -9,8 +9,14 @@ const NewBlogPage = () => {
 
   const onClick = React.useCallback((e) => {
     e.preventDefault();
-    console.debug(formRef.current["formTopic"].value);
-    console.debug(formRef.current["formTopic"].value);
+    const data = {
+      topic: formRef.current["formTopic"].value,
+      category: formRef.current["formCategory"].value,
+      content: formRef.current["formContent"].value,
+      author: formRef.current["formAuthor"].value,
+    }
+
+    console.debug(data);
   }, [formRef]);
 
   return (
@@ -24,7 +30,7 @@ const NewBlogPage = () => {
         <Form.Group className="mb-3" controlId="formCategory">
           <Form.Label>Category</Form.Label>
           <Form.Select aria-label="Category">
-            <option>-- Choose Category --</option>
+            <option value="0">-- Choose Category --</option>
             <option value="1">Games</option>
             <option value="2">Sport</option>
             <option value="3">Tech</option>

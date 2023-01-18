@@ -1,10 +1,11 @@
+# Sample Blog Frontend (Gatsby)
 
 # Important
-* Use YARN
-* Not compatible with PNPM (for now).
+* Prefer **yarn**
+* Not compatible with **pnpm** (for now).
 
 
-# Insisting on PNPM?
+# Insisting to use **pnpm**?
 But does not work with Gatsby 5.
 
 `pnpm add gatsby-plugin-pnpm`
