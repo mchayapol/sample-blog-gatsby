@@ -6,5 +6,7 @@ module.exports = {
     title: `sample-blog-gatsby`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-pnpm`,
+  ],
 }
